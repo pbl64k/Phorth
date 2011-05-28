@@ -1,0 +1,28 @@
+(test!!!) (borken subs in promises) (promises borken in Phortitude - not stored in session) promise .. esimorp
+fix memory leaks
+program .. margorp
+loop .. pool
+sub .. bus, func .. cnuf, alias .. saila
+risk .. snatch .. ksir - hurl
+(test!!!) tail!!?
+exceptions within the machine on stack underflow? and divisionbyzero? on all exceptions?
+safer everything
+inject stacks by reference where applicable?
+factor default invoke() method (sep. parser?) (inherited _ and __)
+refactor and modularize
+array_splice for pop()s?
+cons cells? PhorthEngine___Cons
+list lib?
+optimize mapreduce
+stack moving and copying
+improved mathlib
+stringlib?
+
+test factoring
+
+(stepping... somehow?) interactive interpreter?
+(improve?) beautified state in phortitude
+nice, compliant phortitude design
+call/cc? (only within program)
+new fac and fib tests
+

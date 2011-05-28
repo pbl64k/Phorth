@@ -1,0 +1,26 @@
+EXTREMELY IMPORTANT: Phortitude.php allows execution of arbitrary PHP
+code by remote agents and MUST NOT be deployed where publicly available.
+
+Phorth was created around Feb-Mar 2010 while I was researching the
+feasibility of mnemonic values and operations for on-the-fly explanation
+of business logic to the end-users. It's a stack-based eDSL, influenced
+to an extent by Forth and Factor, as well as certain FP approaches.
+
+As of 0.0.11b, its utility is nonexistent. There's a slew of pretty nasty
+bugs in it, mnemonic values per se are not even implemented and thanks to
+faulty fundamental design there are some severe problems with proper
+scoping and memory usage.
+
+The project was eventually abandoned as I realized that:
+
+1). Crufty syntax would represent a severe obstacle to using this for
+specifying business logic in any practical setting.
+
+2). Memory requirements were extremely steep for the benefit this
+approach could potentially provide - even assuming the existing issues
+could be resolved.
+
+3). Any attempt at practical usage would require a from the ground up
+redesign and rewrite, with fairly bleak prospects of actually getting any
+mileage out of it.
+
