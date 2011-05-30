@@ -6,7 +6,7 @@ feasibility of mnemonic values and operations for on-the-fly explanation
 of business logic to the end-users. It's a stack-based eDSL, influenced
 to an extent by Forth and Factor, as well as certain FP approaches.
 
-As of 0.0.11b, its utility is nonexistent. There's a slew of pretty nasty
+As of 0.0.12, its utility is nonexistent. There's a slew of pretty nasty
 bugs in it, mnemonic values per se are not even implemented and thanks to
 faulty fundamental design there are some severe problems with proper
 scoping and memory usage.
@@ -24,3 +24,10 @@ could be resolved.
 redesign and rewrite, with fairly bleak prospects of actually getting any
 mileage out of it.
 
+test_Phorth.php is a simple test suite. While it should normally succeed,
+do not take that as a sign that the interpeter works well. The internal
+problems are numerous.
+
+Phortitude.php is a web-based REPL of sorts. It is dangerous, and it
+doesn't work in exactly the same way as Phorth executed from CLI due to
+problems with wakeup of singletons from session.

@@ -132,7 +132,7 @@
 		}
 	}
 
-	class PhorthEngine__IsFail extends PhorthEngine
+	class PhorthEngine__IsFail extends PhorthEngine___Word
 	{
 		protected function decide()
 		{

@@ -51,22 +51,22 @@
 		return rand($min, getrandmax());
 	}
 
-	function genRandTinyInteger($min = 0)
+	function genRandTinyInteger()
 	{
 		return rand(1, 9);
 	}
 
-	function genRandSmallInteger($min = 0)
+	function genRandSmallInteger()
 	{
 		return rand(1, 99);
 	}
 
-	function genRandSmallishInteger($min = 0)
+	function genRandSmallishInteger()
 	{
 		return rand(1, 999);
 	}
 
-	function genRandReasonablyModestInteger($min = 0)
+	function genRandReasonablyModestInteger()
 	{
 		return rand(1, 99999);
 	}
@@ -889,80 +889,5 @@
 	$finished = microtime(TRUE);
 
 	print('total execution time: '.round($finished - $started, 4).' seconds.'.$lnbr);
-
-/*
-100 INPUT "X=",X
-110 T=1
-120 IF X>=0 THEN 160
-130 T=T*X
-140 X=X+1
-150 GOTO 120
-160 G=1.00000000019
-170 G=G+76.1800917295/(X+1)
-180 G=G-86.5053203294/(X+2)
-190 G=G+24.0140982408/(X+3)
-200 G=G-1.23173957245/(X+4)
-210 G=G+1.20865097387E-3/(X+5)
-220 G=G-5.39523938495E-6/(X+6)
-230 G=LN (SQR (2*pi)*G/X)
-240 G=G-X-5.5+LN (X+5.5)*(X+.5)
-250 PRINT EXP(G)/T
-*/
-
-/*
-\Gamma(1) = 1,\,
-\Gamma(2) = 1,\,
-\Gamma(3) = 2,\,
-\Gamma(4) = 6,\,
-\Gamma(5) = 24.\, 
-
-\Gamma(\tfrac12)\, 	= \sqrt{\pi}\, 	\approx 1.7724538509055160273\,,
-\Gamma(\tfrac32)\, 	= \frac {\sqrt{\pi}} {2} \, 	\approx 0.8862269254527580137\,,
-\Gamma(\tfrac52)\, 	= \frac {3 \sqrt{\pi}} {4} \, 	\approx 1.3293403881791370205\,,
-\Gamma(\tfrac72)\, 	= \frac {15\sqrt{\pi}} {8} \, 	\approx 3.3233509704478425512\,,
-
-\Gamma(-\tfrac12)\, 	= -2\sqrt{\pi}\, 	\approx -3.5449077018110320546\,,
-\Gamma(-\tfrac32)\, 	= \frac {4\sqrt{\pi}} {3} \, 	\approx 2.3632718012073547031\,,
-\Gamma(-\tfrac52)\, 	= \frac {-8\sqrt{\pi}} {15} \, 	\approx -0.9453087204829418812\,.
-
-\Gamma(\tfrac13) \approx 2.6789385347077476337
-\Gamma(\tfrac14) \approx 3.6256099082219083119
-\Gamma(\tfrac15) \approx 4.5908437119988030532
-\Gamma(\tfrac16) \approx 5.5663160017802352043
-\Gamma(\tfrac17) \approx 6.5480629402478244377 
-*/
-
-/*
-procedure qbench; var a:array[0..8] of integer; r,s,t,x,y:integer; begin r:=8; s:=0; x:=0; repeat inc(x); a[x]:=r; repeat inc(s); y:=x; while y>1 do begin dec(y); t:=a[x]-a[y]; if (t=0) or (x-y=abs(t)) then begin y:=0; dec(a[x]); while a[x]=0 do begin dec(x); dec(a[x]); end; end; end; until y=1; until x=r; writeln(s); end;
-*/
-
-/*
- main()
- {
-   int x,y,r,s,t,n,a[9];
-
-   for(n=1000;n>0;--n){
-     r=8;
-     s=0;
-     x=0;
-     do{
-       a[++x]=r;
-       do{
-         ++s;
-         y=x;
-         while(y>1)
-           if (!(t=a[x]-a[--y]) || x-y==abs(t)){
-             y=0;
-             while(!--a[x])
-               --x;
-           }
-       } while(y!=1);
-     } while(x!=r);
-   }
-   printf("%d",s);
- }
-*/
-
-/* UTM! */
 
 ?>
